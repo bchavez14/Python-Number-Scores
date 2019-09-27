@@ -1,0 +1,49 @@
+
+def read_scored(n):
+    score_list = []
+    for index in range(n):
+        score = int(input("Please enter a score between 0 to 5: "))
+        score_list.append(score)
+    return score_list
+
+print()
+students = int(input("Please enter the number of students to show scores for: "))
+print()
+
+def main(d):
+    zcount = 0
+    ocount = 0
+    twcount = 0
+    thcount = 0
+    focount = 0
+    ficount = 0
+    lc = 0
+    working_list = read_scored(d)
+    while lc < len(working_list):
+        if working_list[lc] == 0:
+            zcount += 1
+            lc += 1
+        elif working_list[lc] == 1:
+            ocount += 1
+            lc += 1
+        elif working_list[lc] == 2:
+            twcount += 1
+            lc += 1
+        elif working_list[lc] == 3:
+            thcount += 1
+            lc += 1
+        elif working_list[lc] == 4:
+            focount += 1
+            lc += 1
+        elif working_list[lc] == 5:
+            ficount += 1
+            lc += 1
+    print(" 0 : " + str(zcount))
+    print(" 1 : " + str(ocount))
+    print(" 2 : " + str(twcount))
+    print(" 3 : " + str(thcount))
+    print(" 4 : " + str(focount))
+    print(" 5 : " + str(ficount))
+
+
+main(students)
