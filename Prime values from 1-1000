@@ -1,0 +1,22 @@
+print()
+print("Prime values from 1 to 1000")
+
+def isPrime(n):
+    for factor in range (2, n-1):   
+        if n % factor == 0:
+            return False
+    return True
+
+vl = 0
+lister = []
+
+for i in range(1000):
+    lister.append(vl)
+    vl += 1
+    
+vl = 1
+
+while vl < 1000:
+    if (isPrime(lister[vl]) == True):
+        print(lister[vl])
+    vl += 1
