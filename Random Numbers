@@ -1,0 +1,45 @@
+import random
+
+randoms = []
+
+print("The values in this list")
+for i in range(21):
+    numm = 0
+    numm = round(random.uniform(-1.0, 1.0), 2)
+    randoms.append(numm)
+
+for item in randoms:
+    print(item)
+
+count = 0
+
+print()
+print("Now for the even indices")
+while count < 21:
+    if count % 2 == 0:
+        print(randoms[count])
+    count += 1
+        
+print()
+print("The positive values now: ")
+for item in randoms:
+    if item > 0:
+        print(item)
+
+print()
+print("List in reversed order")
+for item in reversed(randoms):
+    print(item)
+
+count = 0
+
+print()
+print("And the first, middle, and last values.")
+while count < 21:
+    if count == 0:
+        print(randoms[count])
+    elif count == 21 // 2:
+        print(randoms[count])
+    elif count == 20:
+        print(randoms[count])
+    count += 1
